@@ -1,5 +1,6 @@
+import fetch from 'node-fetch';
 
-exports.handler = async function () {
+export async function handler () {
     const POKE_API = "https://pokeapi.co/api/v2/pokemon/ditto";
 
     const response = await fetch(POKE_API)

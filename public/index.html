@@ -27,7 +27,9 @@
         fetchPokemonBtn.addEventListener('click', async () => {
           const response = await fetch('/.netlify/functions/pokemon').then(response => response.json())
 
-          responseText.innerText = JSON.stringify(response)
+          const {name} = response
+
+          responseText.innerText = JSON.stringify({name})
         })
       })
     </script>
