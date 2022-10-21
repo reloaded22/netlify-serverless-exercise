@@ -1,13 +1,13 @@
-import fetch from 'node-fetch';
+const axios = require("axios").default;
 
-export async function handler() {
-    const POKE_API = "https://pokeapi.co/api/v2/pokemon/ditto";
+exports.handler = async function () {
+  const POKE_API = "https://pokeapi.co/api/v2/pokemon/ditto";
 
-    const response = await fetch(POKE_API)
-    const data = await response.json()
+  const response = await axios(POKE_API);
+  const data = await response.json();
 
-    return {
-        statusCode: 200,
-        body: JSON.stringify(data)
-    }
+  return {
+    statusCode: 200,
+    body: JSON.stringify(data),
+  };
 }
