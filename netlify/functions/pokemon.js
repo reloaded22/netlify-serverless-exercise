@@ -1,4 +1,4 @@
-const axios = require("axios").default;
+const axios = require("axios");
 
 exports.handler = async function () {
   const POKE_API = "https://pokeapi.co/api/v2/pokemon/ditto";
